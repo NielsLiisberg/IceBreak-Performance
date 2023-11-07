@@ -1,7 +1,7 @@
 #!/bin/bash
 ## test parameters:
 ## run this:
-## cd /Users/nli/prj/icebreak-performance/pingiws;zsh stpingrun2.sh
+## cd /www/icebreak-performance/pingiws;bash stpingrun2.sh
 let connections=50
 let repeat=2000
 let sleep=100000

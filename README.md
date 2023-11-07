@@ -79,7 +79,22 @@ Now it is time to test the sample:
 2) In the URL type [http://MY_IBM_I:60080](http://MY_IBM_I:60080)  Where MY_IBM_I is the TCP/IP address or name of your IBM i. Or even add the name MY_IBM_I to your ```hosts``` file on your PC 
 [Edit host file](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
 
+# Setting up the client
+This is a node.js / bash tool:
+```
+yum install bash
+yum install nodejs20 
+```
 
+
+Now ssh into  MY_IBM_I 
+```
+ssh MY_IBM_I
+cd /www/icebreak-performance/ping2
+npm -i 
+;bash stpingrun2.sh 
+````
+``
 # Using VSCode as you IDE
 The Sitemule team has made a cool plugin for VSCode so you can edit and compile RPG code.
 
