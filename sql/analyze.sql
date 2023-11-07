@@ -38,4 +38,5 @@ and lgreq like 'GET /router/perform02%';
 
 
 delete from icebreak.tlog00;
+delete from iceperf.perflog;
   
