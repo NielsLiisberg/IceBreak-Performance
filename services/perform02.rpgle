@@ -1,10 +1,9 @@
 <%@ language="RPGLE" free="true" pgmtype="srvpgm" pgmopt="export(*ALL)" %><%
 ctl-opt copyright('Sitemule.com  (C), 2023');
 ctl-opt debug(*yes) nomain;
-// ---------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // Performance test ctl-opt debug(*yes) nomain PGMINFO(*PCML:*MODULE);
-
-// ---------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 /include qsysinc/qrpglesrc,unistd 
 /include qrpgleref,jsonparser
 
@@ -14,9 +13,9 @@ dcl-f perflog
       usage(*output )               
       rename(PERFLOGR:perflogout);  
 
-/*  -----------------------------------------------------------------------------
-    Simple JSON I/O returning a resultset
-    ----------------------------------------------------------------------------- */
+// -----------------------------------------------------------------------------
+// Simple JSON I/O returning a resultset
+// ----------------------------------------------------------------------------- 
 dcl-proc performance export;
 
     dcl-pi *n pointer;

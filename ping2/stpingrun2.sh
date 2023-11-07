@@ -2,8 +2,8 @@
 ## test parameters:
 ## run this:
 ## cd /www/icebreak-performance/pingiws;bash stpingrun2.sh
-let connections=50
-let repeat=2000
+let connections=200
+let repeat=1000
 let sleep=100000
 
 echo "Start test"
