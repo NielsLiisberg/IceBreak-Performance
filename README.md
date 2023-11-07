@@ -47,7 +47,7 @@ ssh MY_IBM_I
 PATH=/QOpenSys/pkgs/bin:$PATH
 yum install git
 ```
-And now in the same ssh session - clone the samples repo 
+And now in the same ssh session - clone the performance scenarios repo 
 ```
 cd /www
 git -c http.sslVerify=false clone https://github.com/NielsLiisberg/IceBreak-Performance.git
@@ -64,9 +64,10 @@ ADDICESVR SVRID(ICEPERF) TEXT('IceBreak Performance')
 STRICESVR ICEPERF
 WRKICESBS 
 ```
-You will see the samples server running in the IceBreak subsystem. Now we need to compile some of the samples ( still in the 5250 with ICEBREAK on the library list):
+You will see the performance scenarios server running in the IceBreak subsystem. Now we need to compile some of the performance scenarios ( still in the 5250 with ICEBREAK on the library list):
 
 ```
+RUNSQLSTM SRCSTMF('/www/IceBreak-Performance/sql/perflog.sql') COMMIT(*NONE)                                      
 CRTICEPGM STMF('/www/icebreak-performance/services/perform02.rpgle') SVRID(ICEPERF)
 CRTICEPGM STMF('/www/icebreak-performance/services/sleep.rpgle') SVRID(ICEPERF)
 ```
