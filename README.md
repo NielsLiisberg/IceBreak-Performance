@@ -3,7 +3,7 @@ Applications and test scripts for performance test
 
 
 
-IceBreak is a powerful Web application server that provides a highly reliable, manageable, and scalable Web application infrastructure for the IBM i�. IceBreak runs natively on IBM i� in the ILE environment - NOT using Apache, WebSphere, node.js or any other moving parts.
+IceBreak is a powerful Web application server that provides a highly reliable, manageable, and scalable Web application infrastructure for the IBM i. IceBreak runs natively on IBM i in the ILE environment - NOT using Apache, WebSphere, node.js or any other moving parts.
 
 This repo is about testing some of the performance scenarios    
 
@@ -39,7 +39,7 @@ Now back to your ACS:
 
 1) Click SSH Terminal in ACS ( or use your default terminal like putty) 
 
-(or you can use call qp2term � but I suggest that you get use to ssh)
+(or you can use call qp2term  but I suggest that you get use to ssh)
 
 2) From the terminal. You can also install git with yum from the command line if you don't like the above:  
 ```
@@ -90,11 +90,11 @@ Now ssh into  MY_IBM_I
 ```
 ssh MY_IBM_I
 cd /www/icebreak-performance/ping2
-npm -i 
-;bash stpingrun2.sh 
+npm install 
+bash stpingrun2.sh 
 ````
 ``
-# Using VSCode as you IDE
+# Using VSCode as your IDE
 The Sitemule team has made a cool plugin for VSCode so you can edit and compile RPG code.
 
 In your browser open, download and install VSCode 
