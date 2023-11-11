@@ -78,6 +78,7 @@
 			you can use a random hash value in the cookie by setting the "encrypt" to true.
 	-->
 	<session 
+		disableSessionManager="true"
 		xxx_defaultPgm="*LIBL/SVCDEFAULT"
 		xxx_exitPgm="SVCUDV/ICESESSION" 
 		xxx_cookie="Version=1; Path=/; Discard; secure; HttpOnly"

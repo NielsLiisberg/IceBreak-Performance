@@ -17,7 +17,7 @@ function dorequest(threadno  , repeat, sleep) {
     var data = 'n=' + repeat.toString() + '&thread=' + threadno.toString()
     var options = {
         host: 'MY_IBM_I',
-        port: '60080', // Shared pool
+        port: '60800', // Shared pool
         path: '/sesGetObj4?sleep=' + sleep,
         method: 'POST',
         headers: {
