@@ -10,7 +10,7 @@ function dorequest(session , repeat, sleep) {
     var data = 'n=' + repeat.toString()
     var options = {
         host: 'MY_IBM_I',
-        port: '60080',
+        port: '60800',
         path: '/.' + session + '/echoplusone?sleep=' + sleep,
         method: 'POST',
         headers: {

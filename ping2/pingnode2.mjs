@@ -6,7 +6,7 @@ let sleep      = parseInt(process.argv[4])
 
 async function main() {
     for (let i = 1 ; i <= repeat ; i++) {
-        const response = await fetch('http://MY_IBM_I:60080/router/perform02/performance?payload={"sleeper":' + sleep +'}');
+        const response = await fetch('http://MY_IBM_I:60800/router/perform02/performance?payload={"sleeper":' + sleep +'}');
         const data = await response.text();
         console.log("connection: %d, Count: %d, Response: %s" , connection , i, data )
         if (data.substring(0 , 1) != '{') {

@@ -59,7 +59,7 @@ Go back to a 5250 prompt
 GO ICEBREAK 
 CALL QCMD
 ADDICESVR SVRID(ICEPERF) TEXT('IceBreak Performance') 
-    SVRPORT(60080) HTTPPATH('/www/icebreak-performance') 
+    SVRPORT(60800) HTTPPATH('/www/icebreak-performance') 
     WWWDFTDOC('default.html') DISPTHRMTH(*SHAREDPOOL)         
 STRICESVR ICEPERF
 WRKICESBS 
@@ -76,7 +76,7 @@ CRTICEPGM STMF('/www/icebreak-performance/services/sleep.rpgle') SVRID(ICEPERF)
 Now it is time to test the sample:
 
 1) Open your browser
-2) In the URL type [http://MY_IBM_I:60080](http://MY_IBM_I:60080)  Where MY_IBM_I is the TCP/IP address or name of your IBM i. Or even add the name MY_IBM_I to your ```hosts``` file on your PC 
+2) In the URL type [http://MY_IBM_I:60800](http://MY_IBM_I:60800)  Where MY_IBM_I is the TCP/IP address or name of your IBM i. Or even add the name MY_IBM_I to your ```hosts``` file on your PC 
 [Edit host file](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
 
 # Setting up the client
