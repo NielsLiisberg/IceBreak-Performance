@@ -39,6 +39,7 @@ dcl-proc performance export;
     pOutput = json_newObject();
     json_setBool(pOutput: 'success': *ON);
     json_setStr (pOutput: 'echo': echo);
+    json_setInt (pOutput: 'sleeper': sleeper);
 
     return pOutput;
 
