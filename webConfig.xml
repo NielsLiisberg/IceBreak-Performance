@@ -81,7 +81,7 @@
 		disableSessionManager="true"
 		xxx_defaultPgm="*LIBL/SVCDEFAULT"
 		xxx_exitPgm="SVCUDV/ICESESSION" 
-		xxx_cookie="Version=1; Path=/; Discard; secure; HttpOnly"
+		yyy_cookie="Version=1; Path=/; Discard; secure; HttpOnly"
 		xxx_cookie="Version=1; Path=/; Discard"
   		xxx_cookiePort="true"
 		xxx_encrypt="true"
@@ -203,5 +203,3 @@
 
 
 </configuration>
-
-

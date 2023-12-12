@@ -7,7 +7,7 @@
 ## SBMJOB CMD(CALL PGM(QP2SHELL) PARM(('/QOpenSys/pkgs/bin/bash') ('-c') ('export PATH=/QOpenSys/pkgs/bin:$PATH;cd /www/icebreak-performance/ping2;stpingrun2.sh'))) JOB(PERFTEST)                                         
 let connections=10
 let repeat=10
-let sleep=10
+let sleep=1
 echo "Start test"
 let connection=1
 while test $connection -le $connections ; do

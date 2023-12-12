@@ -24,16 +24,23 @@ dcl-proc performance export;
 
     dcl-s pOutput pointer;
     dcl-s sleeper int(10);
+    dcl-s echo    varchar(256);
 
     // Simulate workload in microseconds    
     sleeper = json_getint ( pInput: 'sleeper');
     usleep (sleeper);          
 
+    echo = json_getstr ( pInput: 'echo');
+
     // write the log                
     plTime = %timestamp();          
     write perflogOut;   
 
-    return json_successTrue ('sleep': %char(plTime));
+    pOutput = json_newObject();
+    json_setBool(pOutput: 'success': *ON);
+    json_setStr (pOutput: 'echo': echo);
+
+    return pOutput;
 
 
 end-proc;
