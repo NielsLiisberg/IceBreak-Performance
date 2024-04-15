@@ -7,11 +7,7 @@ ctl-opt debug(*yes) nomain;
 /include qsysinc/qrpglesrc,unistd 
 /include qrpgleref,jsonparser
 
-dcl-f perflog                       
-      extdesc('PERFLOG')            
-      extfile(*extdesc)             
-      usage(*output )               
-      rename(PERFLOGR:perflogout);  
+dcl-f perflog extdesc('PERFLOG') extfile(*extdesc) usage(*output) rename(PERFLOGR:perflogout);  
 
 // -----------------------------------------------------------------------------
 // Simple JSON I/O returning a resultset
