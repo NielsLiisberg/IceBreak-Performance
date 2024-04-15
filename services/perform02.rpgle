@@ -28,7 +28,9 @@ dcl-proc performance export;
 
     // Simulate workload in microseconds    
     sleeper = json_getint ( pInput: 'sleeper');
-    usleep (sleeper);          
+    if sleeper > 0;
+        usleep (sleeper);   
+    endif;       
 
     echo = json_getstr ( pInput: 'echo');
 
