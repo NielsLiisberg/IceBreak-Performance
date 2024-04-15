@@ -24,7 +24,7 @@ dcl-proc performance export;
     end-pi;
 
     dcl-s pOutput pointer;
-    dcl-s sleeper int(10);
+    dcl-s sleeper int(20);
     dcl-s echo    varchar(256);
 
     // Simulate workload in microseconds    
