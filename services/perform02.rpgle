@@ -15,6 +15,7 @@ dcl-f perflog
 
 // -----------------------------------------------------------------------------
 // Simple JSON I/O returning a resultset
+// curl -X POST 'http://MY_IBM_I:60800/router/perform02/performance' -d '{"sleeper":10,"echo":"abc"}' -k
 // ----------------------------------------------------------------------------- 
 dcl-proc performance export;
 
