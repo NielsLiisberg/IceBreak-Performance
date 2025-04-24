@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "63f9a08c-fbc4-467e-8a84-90152d227114",
+		"name": "MDPOC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14320844",
+		"_collection_link": "https://mdcms-dev.postman.co/workspace/MDRest4i-V14~9fd16a1e-e525-4173-8712-27ab83cf0e84/collection/14320844-63f9a08c-fbc4-467e-8a84-90152d227114?action=share&source=collection_link&creator=14320844"
+	},
+	"item": [
+		{
+			"name": "FASTAPIS",
+			"item": [
+				{
+					"name": "listClients",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"message\":\"something was said\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dev.mdcms.ch:2578/api/client/listClients?id=2",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2578",
+							"path": [
+								"api",
+								"client",
+								"listClients"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						},
+						"description": "- noxDB (incl. dynamic SQL statement)\n    \n- ICEbreak"
+					},
+					"response": []
+				},
+				{
+					"name": "listClientsSQL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://dev.mdcms.ch:2578/api/client/listClientsSQL",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2578",
+							"path": [
+								"api",
+								"client",
+								"listClientsSQL"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						},
+						"description": "- static embedded SQL\n    \n- ICEbreak (incl. data-gen)"
+					},
+					"response": []
+				},
+				{
+					"name": "acceptClaim",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"statusCode\": \"string\",\n  \"detail\": \"string\",\n  \"severity\": \"string\",\n  \"additionalStatus\": {\n    \"detail\": \"string\",\n    \"severity\": \"string\",\n    \"statusCode\": \"string\",\n    \"serviceName\": \"string\"\n  },\n  \"createPharmacyClaimEstimatesResponse\": {\n    \"statusCode\": 0,\n    \"stackingIndicator\": true,\n    \"batchNumber\": 0,\n    \"pharmacyClaimEstimates\": [\n      {\n        \"daysSupply\": 0,\n        \"estimateStatus\": {\n          \"moreInformation\": \"string\",\n          \"statusCode\": \"string\",\n          \"additionalMessages\": [\n            \"string\"\n          ]\n        },\n        \"pharmacyClaim\": {\n          \"claimIdentifier\": {\n            \"resourceId\": \"string\"\n          },\n          \"claimStatus\": \"s\",\n          \"additionalMessages\": [\n            \"string\"\n          ],\n          \"beneficiary\": {\n            \"eligibility\": [\n              {\n                \"adjudicationCarrierId\": \"string\",\n                \"adjudicationAccountId\": \"string\",\n                \"adjudicationGroup\": \"string\"\n              }\n            ],\n            \"externalId\": \"string\",\n            \"personCode\": \"st\"\n          },\n          \"claimNumber\": \"string\",\n          \"claimSequenceNumber\": 0,\n          \"clientFinancials\": {\n            \"adjudicatedFinancials\": {\n              \"dispensedFee\": 999999999.99,\n              \"ingredientCost\": 999999999.99,\n              \"salesTax\": 999999999.99\n            },\n            \"advancedFinancials\": {\n              \"bypassRemoteAccumulatorsCode\": \"string\",\n              \"dispensingFeePaidByClient\": 999999999.99,\n              \"estimatedPlanPrice\": 999999999.99,\n              \"healthSavingsAccountClaimFamilyAmount\": 999999999.99,\n              \"healthSavingsAccountClaimIndividualAmount\": 999999999.99,\n              \"ingredientCostPaidByClient\": 999999999.99,\n              \"maximumAllowableCostPenaltyAmount\": 999999999.99,\n              \"medicalIntegrationCode\": \"string\",\n              \"memberAfterMax\": 999999999.99,\n              \"memberCopay\": 999999999.99,\n              \"memberDeductible\": 999999999.99,\n              \"memberDifference\": 999999999.99,\n              \"memberTotal\": 999999999.99,\n              \"primaryPlanMemberPay\": 999999999.99,\n              \"taxPaidByClient\": 999999999.99,\n              \"thisClaimMemberCopay\": 999999999.99,\n              \"thisClaimMemberDeductible\": 999999999.99,\n              \"thisClaimMemberPay\": 999999999.99,\n              \"transitionalAssistanceAmount\": 999999999.99,\n              \"usualAndCustomaryAmountForClient\": 999999999.99\n            },\n            \"medicareFinancials\": {\n              \"brandCopayDifferenceAmount\": 999999999.99,\n              \"calculatedGenericCopayAmount\": 999999999.99,\n              \"calculatedGenericPriceAmount\": 999999999.99,\n              \"catastrophicCopayAmount\": 999999999.99,\n              \"gapCopayAmount\": 999999999.99,\n              \"gapDiscountAppliedIndicator\": true,\n              \"gapStatuteCoinsuranceIndicator\": true,\n              \"initialCopayAmount\": 999999999.99,\n              \"licsSubsidyAmount\": 999999999.99,\n              \"medicarePartDCurrentPhaseCode\": \"string\",\n              \"medicarePartDCurrentPhaseRemainingAmount\": 999999999.99,\n              \"medicarePartDNextPhaseCode\": \"string\",\n              \"medicarePartDPhases\": [\n                {\n                  \"grossCoveredClaimCost\": 999999999.99,\n                  \"patientPay\": 999999999.99,\n                  \"phaseCode\": \"string\",\n                  \"planPay\": 999999999.99\n                }\n              ],\n              \"reportedGapDiscountAmount\": 999999999.99,\n              \"trueOutOfPocketAmount\": 999999999.99\n            },\n            \"patientPay\": {\n              \"accumulatedDeductibleAmount\": 999999999.99,\n              \"appliedToDeductible\": 999999999.99,\n              \"appliedToFlexibleSpendingAccountAmount\": 999999999.99,\n              \"appliedToHealthSavingsAccountAmount\": 999999999.99,\n              \"dispenseAsWrittenPenalty\": 999999999.99,\n              \"healthReimbursementAccountYears\": [\n                {\n                  \"accumulatedAmount\": 999999999.99,\n                  \"year\": 9999\n                }\n              ],\n              \"healthSavingsAccountClaimAmount\": 999999999.99,\n              \"nonFormularyPenaltyAmount\": 999999999.99,\n              \"patientCopay\": 999999999.99,\n              \"patientCopayDrug\": 999999999.99,\n              \"patientCopayPlan\": 999999999.99,\n              \"remainingDeductibleAmount\": 999999999.99,\n              \"remainingHealthReimbursementAccountAmount\": 999999999.99,\n              \"totalPatientCost\": 999999999.99\n            },\n            \"pricing\": {\n              \"drugPriceSource\": \"string\",\n              \"drugPriceType\": \"string\",\n              \"maximumAllowedBenefitAppliedAmount\": 999999999.99,\n              \"maximumOutOfPocketAppliedAmount\": 999999999.99,\n              \"remainingBenefitAmount\": 999999999.99\n            },\n            \"submittedFinancials\": {\n              \"totalSubmitted\": 999999999.99,\n              \"usualAndCustomaryAmount\": 999999999.99\n            },\n            \"clientPay\": {\n              \"totalClientCost\": 999999999.99\n            },\n            \"maintenanceChoiceIndicator\": true,\n            \"vaccineAdministrationFee\": 999999999.99,\n            \"vaccineClaimType\": \"string\"\n          },\n          \"dispensedDrug\": {\n            \"applicationType\": \"string\",\n            \"brandIndicator\": true,\n            \"drugId\": \"string\",\n            \"drugIdQualifier\": \"string\",\n            \"NDC11\": \"string\"\n          },\n          \"drugUtilizationReviews\": [\n            {\n              \"conflictCode\": \"string\",\n              \"conflictingFillDate\": \"string\",\n              \"conflictingFillQuantity\": 0,\n              \"messages\": [\n                \"string\"\n              ],\n              \"occurrences\": 0,\n              \"otherDbCode\": \"string\",\n              \"otherPharmacyCode\": \"string\",\n              \"otherPrescriberCode\": \"string\",\n              \"severityCode\": \"string\"\n            }\n          ],\n          \"employerGroupWaiverPlanClaimCode\": \"string\",\n          \"flexibleCopayIndicator\": true,\n          \"gracePeriodEffectiveDate\": \"string\",\n          \"gracePeriodIndicator\": true,\n          \"gracePeriodPaymentCode\": \"string\",\n          \"linkedPharmacyClaim\": {\n            \"claimIdentifier\": {\n              \"resourceId\": \"string\",\n              \"beneficiary\": {\n                \"eligibility\": [\n                  {\n                    \"adjudicationCarrierId\": \"string\",\n                    \"adjudicationAccountId\": \"string\",\n                    \"adjudicationGroup\": \"string\"\n                  }\n                ],\n                \"externalId\": \"string\",\n                \"personCode\": \"st\"\n              }\n            },\n            \"claimNumber\": \"string\",\n            \"claimSequenceNumber\": 0,\n            \"primaryIndicator\": true,\n            \"statusHistories\": [\n              {\n                \"statusReason\": {\n                  \"normalizedStatus\": \"string\",\n                  \"statusCode\": \"string\"\n                }\n              }\n            ],\n            \"pharmacy\": {\n              \"name\": \"string\",\n              \"nationalProviderId\": \"string\",\n              \"ncpdpId\": \"string\",\n              \"pharmacyId\": \"string\"\n            },\n            \"rejectCodes\": [\n              {\n                \"code\": \"string\",\n                \"description\": \"string\",\n                \"shortDescription\": \"string\"\n              }\n            ],\n            \"settlementCodes\": [\n              {\n                \"code\": \"string\",\n                \"description\": \"string\",\n                \"priority\": \"string\",\n                \"severityCode\": \"string\"\n              }\n            ],\n            \"transformCare\": {\n              \"indicator\": true,\n              \"type\": \"string\"\n            }\n          }\n        },\n        \"quantity\": 0\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dev.mdcms.ch:2578/api/claims/acceptClaim",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2578",
+							"path": [
+								"api",
+								"claims",
+								"acceptClaim"
+							]
+						},
+						"description": "- noxDB\n    \n- ICEbreak"
+					},
+					"response": []
+				},
+				{
+					"name": "queueClaim",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"statusCode\": \"string\",\n  \"detail\": \"string\",\n  \"severity\": \"string\",\n  \"additionalStatus\": {\n    \"detail\": \"string\",\n    \"severity\": \"string\",\n    \"statusCode\": \"string\",\n    \"serviceName\": \"string\"\n  },\n  \"createPharmacyClaimEstimatesResponse\": {\n    \"statusCode\": 0,\n    \"stackingIndicator\": true,\n    \"batchNumber\": 0,\n    \"pharmacyClaimEstimates\": [\n      {\n        \"daysSupply\": 0,\n        \"estimateStatus\": {\n          \"moreInformation\": \"string\",\n          \"statusCode\": \"string\",\n          \"additionalMessages\": [\n            \"string\"\n          ]\n        },\n        \"pharmacyClaim\": {\n          \"claimIdentifier\": {\n            \"resourceId\": \"string\"\n          },\n          \"claimStatus\": \"s\",\n          \"additionalMessages\": [\n            \"string\"\n          ],\n          \"beneficiary\": {\n            \"eligibility\": [\n              {\n                \"adjudicationCarrierId\": \"string\",\n                \"adjudicationAccountId\": \"string\",\n                \"adjudicationGroup\": \"string\"\n              }\n            ],\n            \"externalId\": \"string\",\n            \"personCode\": \"st\"\n          },\n          \"claimNumber\": \"string\",\n          \"claimSequenceNumber\": 0,\n          \"clientFinancials\": {\n            \"adjudicatedFinancials\": {\n              \"dispensedFee\": 999999999.99,\n              \"ingredientCost\": 999999999.99,\n              \"salesTax\": 999999999.99\n            },\n            \"advancedFinancials\": {\n              \"bypassRemoteAccumulatorsCode\": \"string\",\n              \"dispensingFeePaidByClient\": 999999999.99,\n              \"estimatedPlanPrice\": 999999999.99,\n              \"healthSavingsAccountClaimFamilyAmount\": 999999999.99,\n              \"healthSavingsAccountClaimIndividualAmount\": 999999999.99,\n              \"ingredientCostPaidByClient\": 999999999.99,\n              \"maximumAllowableCostPenaltyAmount\": 999999999.99,\n              \"medicalIntegrationCode\": \"string\",\n              \"memberAfterMax\": 999999999.99,\n              \"memberCopay\": 999999999.99,\n              \"memberDeductible\": 999999999.99,\n              \"memberDifference\": 999999999.99,\n              \"memberTotal\": 999999999.99,\n              \"primaryPlanMemberPay\": 999999999.99,\n              \"taxPaidByClient\": 999999999.99,\n              \"thisClaimMemberCopay\": 999999999.99,\n              \"thisClaimMemberDeductible\": 999999999.99,\n              \"thisClaimMemberPay\": 999999999.99,\n              \"transitionalAssistanceAmount\": 999999999.99,\n              \"usualAndCustomaryAmountForClient\": 999999999.99\n            },\n            \"medicareFinancials\": {\n              \"brandCopayDifferenceAmount\": 999999999.99,\n              \"calculatedGenericCopayAmount\": 999999999.99,\n              \"calculatedGenericPriceAmount\": 999999999.99,\n              \"catastrophicCopayAmount\": 999999999.99,\n              \"gapCopayAmount\": 999999999.99,\n              \"gapDiscountAppliedIndicator\": true,\n              \"gapStatuteCoinsuranceIndicator\": true,\n              \"initialCopayAmount\": 999999999.99,\n              \"licsSubsidyAmount\": 999999999.99,\n              \"medicarePartDCurrentPhaseCode\": \"string\",\n              \"medicarePartDCurrentPhaseRemainingAmount\": 999999999.99,\n              \"medicarePartDNextPhaseCode\": \"string\",\n              \"medicarePartDPhases\": [\n                {\n                  \"grossCoveredClaimCost\": 999999999.99,\n                  \"patientPay\": 999999999.99,\n                  \"phaseCode\": \"string\",\n                  \"planPay\": 999999999.99\n                }\n              ],\n              \"reportedGapDiscountAmount\": 999999999.99,\n              \"trueOutOfPocketAmount\": 999999999.99\n            },\n            \"patientPay\": {\n              \"accumulatedDeductibleAmount\": 999999999.99,\n              \"appliedToDeductible\": 999999999.99,\n              \"appliedToFlexibleSpendingAccountAmount\": 999999999.99,\n              \"appliedToHealthSavingsAccountAmount\": 999999999.99,\n              \"dispenseAsWrittenPenalty\": 999999999.99,\n              \"healthReimbursementAccountYears\": [\n                {\n                  \"accumulatedAmount\": 999999999.99,\n                  \"year\": 9999\n                }\n              ],\n              \"healthSavingsAccountClaimAmount\": 999999999.99,\n              \"nonFormularyPenaltyAmount\": 999999999.99,\n              \"patientCopay\": 999999999.99,\n              \"patientCopayDrug\": 999999999.99,\n              \"patientCopayPlan\": 999999999.99,\n              \"remainingDeductibleAmount\": 999999999.99,\n              \"remainingHealthReimbursementAccountAmount\": 999999999.99,\n              \"totalPatientCost\": 999999999.99\n            },\n            \"pricing\": {\n              \"drugPriceSource\": \"string\",\n              \"drugPriceType\": \"string\",\n              \"maximumAllowedBenefitAppliedAmount\": 999999999.99,\n              \"maximumOutOfPocketAppliedAmount\": 999999999.99,\n              \"remainingBenefitAmount\": 999999999.99\n            },\n            \"submittedFinancials\": {\n              \"totalSubmitted\": 999999999.99,\n              \"usualAndCustomaryAmount\": 999999999.99\n            },\n            \"clientPay\": {\n              \"totalClientCost\": 999999999.99\n            },\n            \"maintenanceChoiceIndicator\": true,\n            \"vaccineAdministrationFee\": 999999999.99,\n            \"vaccineClaimType\": \"string\"\n          },\n          \"dispensedDrug\": {\n            \"applicationType\": \"string\",\n            \"brandIndicator\": true,\n            \"drugId\": \"string\",\n            \"drugIdQualifier\": \"string\",\n            \"NDC11\": \"string\"\n          },\n          \"drugUtilizationReviews\": [\n            {\n              \"conflictCode\": \"string\",\n              \"conflictingFillDate\": \"string\",\n              \"conflictingFillQuantity\": 0,\n              \"messages\": [\n                \"string\"\n              ],\n              \"occurrences\": 0,\n              \"otherDbCode\": \"string\",\n              \"otherPharmacyCode\": \"string\",\n              \"otherPrescriberCode\": \"string\",\n              \"severityCode\": \"string\"\n            }\n          ],\n          \"employerGroupWaiverPlanClaimCode\": \"string\",\n          \"flexibleCopayIndicator\": true,\n          \"gracePeriodEffectiveDate\": \"string\",\n          \"gracePeriodIndicator\": true,\n          \"gracePeriodPaymentCode\": \"string\",\n          \"linkedPharmacyClaim\": {\n            \"claimIdentifier\": {\n              \"resourceId\": \"string\",\n              \"beneficiary\": {\n                \"eligibility\": [\n                  {\n                    \"adjudicationCarrierId\": \"string\",\n                    \"adjudicationAccountId\": \"string\",\n                    \"adjudicationGroup\": \"string\"\n                  }\n                ],\n                \"externalId\": \"string\",\n                \"personCode\": \"st\"\n              }\n            },\n            \"claimNumber\": \"string\",\n            \"claimSequenceNumber\": 0,\n            \"primaryIndicator\": true,\n            \"statusHistories\": [\n              {\n                \"statusReason\": {\n                  \"normalizedStatus\": \"string\",\n                  \"statusCode\": \"string\"\n                }\n              }\n            ],\n            \"pharmacy\": {\n              \"name\": \"string\",\n              \"nationalProviderId\": \"string\",\n              \"ncpdpId\": \"string\",\n              \"pharmacyId\": \"string\"\n            },\n            \"rejectCodes\": [\n              {\n                \"code\": \"string\",\n                \"description\": \"string\",\n                \"shortDescription\": \"string\"\n              }\n            ],\n            \"settlementCodes\": [\n              {\n                \"code\": \"string\",\n                \"description\": \"string\",\n                \"priority\": \"string\",\n                \"severityCode\": \"string\"\n              }\n            ],\n            \"transformCare\": {\n              \"indicator\": true,\n              \"type\": \"string\"\n            }\n          }\n        },\n        \"quantity\": 0\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dev.mdcms.ch:2578/api/claims/queueClaim",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2578",
+							"path": [
+								"api",
+								"claims",
+								"queueClaim"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						},
+						"description": "- Data Queue (Send & Receive)\n    \n- noxDB\n    \n- ICEbreak"
+					},
+					"response": []
+				},
+				{
+					"name": "readPatient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://dev.mdcms.ch:2578/api/patient/readPatient?AEAFCD=PAT3",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2578",
+							"path": [
+								"api",
+								"patient",
+								"readPatient"
+							],
+							"query": [
+								{
+									"key": "AEAFCD",
+									"value": "PAT3"
+								}
+							]
+						},
+						"description": "- Database Access Layer to retrieve Record\n    \n- noxDB\n    \n- ICEbreak"
+					},
+					"response": []
+				},
+				{
+					"name": "DYNPROC-Readtsaerel1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pAeafcd\":\"PAT2\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dev.mdcms.ch:2578/noxprcapi/CVSPOC/dbpatient/Readtsaerel1",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2578",
+							"path": [
+								"noxprcapi",
+								"CVSPOC",
+								"dbpatient",
+								"Readtsaerel1"
+							]
+						},
+						"description": "- dynamic procedure to webservice export (MDDYNPRC)\n    \n    - NOXPRCAPI\n        \n- ICEbreak"
+					},
+					"response": []
+				},
+				{
+					"name": "DYNPROC-readLXCLIENT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pId\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dev.mdcms.ch:2578/noxprcapi/CVSPOC/dbclient/readLXCLIENT",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2578",
+							"path": [
+								"noxprcapi",
+								"CVSPOC",
+								"dbclient",
+								"readLXCLIENT"
+							]
+						},
+						"description": "- dynamic procedure to webservice export (MDDYNPRC)\n    \n    - NOXPRCAPI\n        \n- ICEbreak"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RESPONLY",
+			"item": [
+				{
+					"name": "IWS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://dev.mdcms.ch:2598/web/services/workloadSleep/workloadSleep",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2598",
+							"path": [
+								"web",
+								"services",
+								"workloadSleep",
+								"workloadSleep"
+							]
+						},
+						"description": "- IWS\n    \n    - Apache + WAS"
+					},
+					"response": []
+				},
+				{
+					"name": "MDFASTCGI",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://dev.mdcms.ch:2588",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2588"
+						},
+						"description": "- ILEastic\n    \n- FASTCGi\n    \n- nginx"
+					},
+					"response": []
+				},
+				{
+					"name": "MDHTTP_MDDYNPROC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pId\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dev.mdcms.ch:2578/noxprcapi/CVSPOC/dbpatient/workloadSleep",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2578",
+							"path": [
+								"noxprcapi",
+								"CVSPOC",
+								"dbpatient",
+								"workloadSleep"
+							]
+						},
+						"description": "- dynamic procedure to webservice export (MDDYNPROC)\n    \n    - NOXPRCAPI\n        \n- ICEbreak"
+					},
+					"response": []
+				},
+				{
+					"name": "MDHTTP_MDPROC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dev.mdcms.ch:2578/api/MDFASTHTTP/workloadSleep",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2578",
+							"path": [
+								"api",
+								"MDFASTHTTP",
+								"workloadSleep"
+							]
+						},
+						"description": "- MDRouter\n    \n    - loadServiceProgramProc\n        \n- ICEbreak"
+					},
+					"response": []
+				},
+				{
+					"name": "MDMICRO",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://dev.mdcms.ch:2590",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"mdcms",
+								"ch"
+							],
+							"port": "2590"
+						},
+						"description": "- ILEastic"
+					},
+					"response": []
+				}
+			],
+			"description": "MDFASTHTTP = ICEBreak\n\nMDMICRO = ILEAstic\n\nMDFASTCGI = nginx + ILEAstic + ILEfastCGI\n\nMDPROC = Call procedure via REST PATH (cacheable)\n\nMDDYNPROC = Dynamic Procedure Export (=NOXPRCAPI) self updating"
+		}
+	]
+}
