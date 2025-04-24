@@ -2,7 +2,7 @@
 
 from locust import HttpUser, task
 
-class echoPlusOne (HttpUser):
+class indexhtml (HttpUser):
     @task
-    def echo_plus_one(self):
+    def index_html(self):
         self.client.get("/index.html") 

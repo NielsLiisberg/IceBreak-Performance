@@ -11,7 +11,7 @@ index.html
 node_modules
 
 # misc
-__pycache__
+__pycache__/
 .DS_Store
 .env.local
 .env.development.local
