@@ -1,0 +1,12 @@
+import time
+from locust import HttpUser, task
+## command to run in terminal:
+## locust --host=http://dev.mdcms.ch:2578 --locustfile listClients.py
+
+class mdrest4iuser(HttpUser):
+
+    @task
+    def environment1(self):
+        self.client.post(
+              url="http://dev.mdcms.ch:2578/noxprcapi/CVSPOC/dbpatient/Readtsaerel1", data='{"pAeafcd":"PAT2"}'
+            )
