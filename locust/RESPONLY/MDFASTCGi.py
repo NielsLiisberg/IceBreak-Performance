@@ -1,7 +1,5 @@
-import time
+# url  http://my_ibm_i:60800
 from locust import HttpUser, task
-## command to run in terminal:
-## locust --host=http://dev.mdcms.ch:2588 --locustfile Linux-eu-MDFASTCGi.py
 
 class mdrest4iuser(HttpUser):
 
