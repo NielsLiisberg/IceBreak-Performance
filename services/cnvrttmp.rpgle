@@ -3,7 +3,11 @@ Ctl-Opt nomain PGMINFO(*PCML:*MODULE);
 // Program to convert temperature from Fahrenheit to Celsius
 // This program is called by the IWS HTTP server - 
 // to compare perfoamce with IceBreak 
-// 
+// compile:
+// CRTRPGMOD MODULE(ICEPERF/CNVRTTMP) SRCSTMF('/www/icebreak-performance/services/cnvrttmp.rpgle') 
+// CRTSRVPGM SRVPGM(ICEPERF/CNVRTTMP) MODULE(ICEPERF/CNVRTTMP) EXPORT(*ALL)
+
+// To use this program, you need to have the IWS server running
 // Go and configure the IWS and add the following URL:
 // http://MY_IBM_I:2001/HTTPAdmin
 

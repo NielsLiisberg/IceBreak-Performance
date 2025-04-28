@@ -1,0 +1,67 @@
+﻿{
+    "swagger": "2.0",
+    "info": {
+        "title": "CNVRTTMP APIs",
+        "description": "APIs available for CNVRTTMP",
+        "version": "1.0.0"
+    },
+    "host": "dksrv206:10019",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/web/services/CNVRTTMP",
+    "tags": [
+        {
+            "name": "CNVRTTMP APIs",
+            "description": "APIs available for CNVRTTMP"
+        }
+    ],
+    "definitions": {
+        "CONVERTTEMPResult": {
+            "type": "object",
+            "properties": {
+                "TEMPOUT": {
+                    "type": "string",
+                    "maxLength": 10
+                }
+            }
+        }
+    },
+    "paths": {
+        "/temperature/{temp}": {
+            "get": {
+                "tags": [
+                    "CNVRTTMP APIs"
+                ],
+                "operationId": "CONVERTTEMP",
+                "consumes": [
+                    "*/*"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "temp",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "pattern": "\\d+",
+                        "maxLength": 10
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/CONVERTTEMPResult"
+                        }
+                    },
+                    "500": {
+                        "description": "Unexpected exception"
+                    }
+                }
+            }
+        }
+    }
+}
